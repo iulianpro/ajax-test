@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
     <script type="text/javascript" src="main.js"></script>
     <title>Ajax Test</title>
 </head>
 
 <body>
-    <button onclick="writeToDocument('https://swapi.co/api/people')">People</button>
-    <button onclick="writeToDocument('https://swapi.co/api/planets')">Planets</button>
-    <button onclick="writeToDocument('https://swapi.co/api/species')">Species</button>
-    <button onclick="writeToDocument('https://swapi.co/api/starships')">Starships</button>
-    <button onclick="writeToDocument('https://swapi.co/api/films')">Films</button>
-    <div id="data">
-
+    <div class="container-fluid">
+        <div class="ml-5 mt-5 d-inline-block">
+            <button class="btn btn-primary" onclick="writeToDocument('https://swapi.dev/api/people')">People</button>
+            <button class="btn btn-primary" onclick="writeToDocument('https://swapi.dev/api/planets')">Planets</button>
+            <button class="btn btn-primary" onclick="writeToDocument('https://swapi.dev/api/species')">Species</button>
+            <button class="btn btn-primary" onclick="writeToDocument('https://swapi.dev/api/starships')">Starships</button>
+            <button class="btn btn-primary" onclick="writeToDocument('https://swapi.dev/api/films')">Films</button>
+        </div>
+        <div id="loader" class="d-none ml-4"><img src="loading.gif" alt=""></div>
+        <div id="data" class="mt-3"></div>
     </div>
 </body>
 
