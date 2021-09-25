@@ -1,4 +1,7 @@
 function getData(url, cb) {
+    var loaderElement = document.getElementById('loader');
+    loaderElement.classList.remove('d-none');
+    loaderElement.classList.add('d-inline-block');
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
@@ -59,5 +62,8 @@ function writeToDocument(url) {
         });
 
         el.innerHTML = `<table class="table table-bordered">${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, '');
+        var loaderElement = document.getElementById('loader');
+        loaderElement.classList.remove('d-inline-block');
+        loaderElement.classList.add('d-none');
     });
 }
